@@ -335,7 +335,7 @@ a { color: inherit; text-decoration: none; }
 
 /* === Screenshots === */
 .screenshots {
-  padding: 64px 0;
+  padding: 0;
 }
 
 .screenshot-showcase {
