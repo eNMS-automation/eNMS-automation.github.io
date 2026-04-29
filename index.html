@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="eNMS - Open-source network automation platform. Automate configuration, backups, and operations across thousands of devices.">
+  <meta name="author" content="Antoine Fourmy">
+  <title>eNMS - Network Automation Platform</title>
+  <link rel="icon" type="image/png" href="img/logo-small.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="img/logo-small.png" alt="eNMS" width="32" height="32">
+        <span>eNMS</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/eNMS-automation/eNMS" target="_blank" rel="noopener" class="nav-cta">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Open Source</div>
+        <h1>Network Automation,<br><span class="gradient-text">Simplified.</span></h1>
+        <p class="hero-sub">Automate configuration changes, backups, and operational tasks across thousands of network devices - without vendor lock-in.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/eNMS-automation/eNMS" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Get Started
+          </a>
+          <a href="https://enms.readthedocs.io/en/latest/" target="_blank" rel="noopener" class="btn btn-secondary">Documentation</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>50,000+</strong>
+            <span>Devices per instance</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>Vendor Agnostic</strong>
+            <span>Cisco, Juniper, Arista...</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>Python</strong>
+            <span>Fully extensible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything you need to<br><span class="gradient-text">automate your network</span></h2>
+        <p>A single platform for inventory, visualization, and automation.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Workflow Engine</h3>
+          <p>Build complex automation workflows with a visual drag-and-drop builder. Chain services together with conditional logic.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Configuration Management</h3>
+          <p>Automatically pull, store, and diff device configurations. Search across all configs with regex support.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Network Visualization</h3>
+          <p>Display your network on an interactive world map or logical site views. Real-time device status at a glance.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Secure by Design</h3>
+          <p>All credentials stored in HashiCorp Vault. Role-based access control and full audit logging.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Highly Extensible</h3>
+          <p>Any Python script becomes a service in eNMS. Integrates with Ansible, Netmiko, NAPALM, and your custom tools.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Scheduling</h3>
+          <p>Schedule any task to run later, once or on a recurring basis. Full calendar view with execution history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <h2>See it in action</h2>
+        <p>A powerful web interface designed for network engineers.</p>
+      </div>
+      <div class="screenshot-showcase">
+        <div class="screenshot-tabs">
+          <button class="screenshot-tab active" data-index="0">Dashboard</button>
+          <button class="screenshot-tab" data-index="1">Network Map</button>
+          <button class="screenshot-tab" data-index="2">Workflow Builder</button>
+          <button class="screenshot-tab" data-index="3">Config Management</button>
+          <button class="screenshot-tab" data-index="4">Web SSH</button>
+          <button class="screenshot-tab" data-index="5">Scheduling</button>
+        </div>
+        <div class="screenshot-viewer">
+          <div class="screenshot-slide active" data-index="0">
+            <img src="img/dashboard.png" alt="Dashboard" loading="lazy">
+            <p class="screenshot-caption">A dashboard with dynamic charts providing a graphical overview of your network.</p>
+          </div>
+          <div class="screenshot-slide" data-index="1">
+            <img src="img/view.png" alt="Network Map" loading="lazy">
+            <p class="screenshot-caption">Visualize your entire network on an interactive world map.</p>
+          </div>
+          <div class="screenshot-slide" data-index="2">
+            <img src="img/workflow_builder.png" alt="Workflow Builder" loading="lazy">
+            <p class="screenshot-caption">Build complex automation workflows with a visual drag-and-drop interface.</p>
+          </div>
+          <div class="screenshot-slide" data-index="3">
+            <img src="img/configuration_management.png" alt="Configuration Management" loading="lazy">
+            <p class="screenshot-caption">Pull, store, and compare device configurations automatically.</p>
+          </div>
+          <div class="screenshot-slide" data-index="4">
+            <img src="img/connection.png" alt="Web SSH" loading="lazy">
+            <p class="screenshot-caption">Connect to any device directly from the browser. Session logs are stored and searchable.</p>
+          </div>
+          <div class="screenshot-slide" data-index="5">
+            <img src="img/calendar.png" alt="Scheduling" loading="lazy">
+            <p class="screenshot-caption">Schedule services and workflows to run at any time, once or periodically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple, transparent pricing</h2>
+        <p>From open-source to enterprise. Unlimited nodes on every plan.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">Open Core</div>
+          <div class="pricing-price">
+            <span class="price-amount">Free</span>
+            <span class="price-period">forever</span>
+          </div>
+          <div class="pricing-desc">Perfect for evaluation and single-user deployments.</div>
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Unlimited nodes
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Single user
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Open core features
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Community support
+            </li>
+          </ul>
+          <a href="https://github.com/eNMS-automation/eNMS" target="_blank" rel="noopener" class="btn btn-secondary btn-block">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Standard</div>
+          <div class="pricing-price">
+            <span class="price-currency">&euro;</span>
+            <span class="price-amount">7,000</span>
+            <span class="price-period">/year</span>
+          </div>
+          <div class="pricing-desc">For teams that need full production features and support.</div>
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Unlimited nodes & users
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              All production features
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              8/5 email support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              8/5 call support
+            </li>
+          </ul>
+          <a href="mailto:contact@enms.io?subject=Standard%20Plan" class="btn btn-primary btn-block">Contact Sales</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">Advanced</div>
+          <div class="pricing-price">
+            <span class="price-currency">&euro;</span>
+            <span class="price-amount">19,000</span>
+            <span class="price-period">/year</span>
+          </div>
+          <div class="pricing-desc">For organizations requiring around-the-clock support.</div>
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Unlimited nodes & users
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              All production features
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              24/7 email support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              24/7 call support
+            </li>
+          </ul>
+          <a href="mailto:contact@enms.io?subject=Advanced%20Plan" class="btn btn-secondary btn-block">Contact Sales</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-price">
+            <span class="price-amount">Custom</span>
+            <span class="price-period">pricing</span>
+          </div>
+          <div class="pricing-desc">Tailored solutions with dedicated support and training.</div>
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              On-site trainings
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Customized builds
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Dedicated support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              SLA guarantees
+            </li>
+          </ul>
+          <a href="mailto:contact@enms.io?subject=Premium%20Plan" class="btn btn-secondary btn-block">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="img/logo-small.png" alt="eNMS" width="40" height="40">
+          <span>eNMS</span>
+        </div>
+        <p class="footer-tagline">Open-source network automation platform.</p>
+        <div class="footer-links">
+          <a href="https://github.com/eNMS-automation/eNMS" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://enms.readthedocs.io/en/latest/" target="_blank" rel="noopener">Documentation</a>
+          <a href="mailto:contact@enms.io">contact@enms.io</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> eNMS Automation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
