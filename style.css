@@ -178,7 +178,7 @@ a { color: inherit; text-decoration: none; }
 
 /* === Hero === */
 .hero {
-  padding: 160px 0 100px;
+  padding: 100px 0 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
