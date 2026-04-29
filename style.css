@@ -283,7 +283,7 @@ a { color: inherit; text-decoration: none; }
 
 /* === Features === */
 .features {
-  padding: 32px 0 28px;
+  padding: 32px 0 60px;
   background: var(--bg-alt);
 }
 
