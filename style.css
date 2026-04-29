@@ -21,7 +21,7 @@
   --gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 56px; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -283,7 +283,7 @@ a { color: inherit; text-decoration: none; }
 
 /* === Features === */
 .features {
-  padding: 64px 0;
+  padding: 40px 0;
   background: var(--bg-alt);
 }
 
