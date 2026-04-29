@@ -58,13 +58,3 @@ document.querySelectorAll('.features-grid .feature-card, .pricing-grid .pricing-
   card.style.transitionDelay = `${i * 0.08}s`;
 });
 
-// Smooth scroll for anchor links (fallback for browsers without CSS scroll-behavior)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
