@@ -58,3 +58,15 @@ document.querySelectorAll('.features-grid .feature-card, .pricing-grid .pricing-
   card.style.transitionDelay = `${i * 0.08}s`;
 });
 
+// Re-scroll to hash after fonts/images load so position is accurate
+window.addEventListener('load', () => {
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView();
+      });
+    }
+  }
+});
+
