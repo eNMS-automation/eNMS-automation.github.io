@@ -176,7 +176,7 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
       const size = node.r * 5;
       const pulse = 1 + Math.sin(time * 1.5 + i * 0.7) * 0.05;
       const s = size * pulse;
-      ctx.globalAlpha = 0.18;
+      ctx.globalAlpha = 0.45;
       ctx.drawImage(icon, pos.x - s / 2, pos.y - s / 2, s, s);
       ctx.globalAlpha = 1;
     });
