@@ -54,8 +54,11 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // Stagger animation for grid items
-document.querySelectorAll('.features-grid .feature-card, .pricing-grid .pricing-card').forEach((card, i) => {
+document.querySelectorAll('.features-grid .feature-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.08}s`;
+});
+document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.06}s`;
 });
 
 // Re-scroll to hash after fonts/images load so position is accurate
