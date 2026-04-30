@@ -1,14 +1,6 @@
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Nav scroll effect
-const nav = document.getElementById('nav');
-const onScroll = () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
-};
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
-
 // Mobile menu toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
@@ -66,23 +58,20 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
   const canvas = document.getElementById('networkCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let w, h;
 
   // Preload device icons
   const icons = {};
   const iconSrcs = { router: 'img/router.gif', switch: 'img/switch.gif', device: 'img/server.gif' };
-  let iconsLoaded = 0;
   for (const [type, src] of Object.entries(iconSrcs)) {
     const img = new Image();
     img.src = src;
-    img.onload = () => { iconsLoaded++; };
     icons[type] = img;
   }
 
   function resize() {
     const rect = canvas.parentElement.getBoundingClientRect();
-    w = canvas.width = rect.width * devicePixelRatio;
-    h = canvas.height = rect.height * devicePixelRatio;
+    canvas.width = rect.width * devicePixelRatio;
+    canvas.height = rect.height * devicePixelRatio;
     canvas.style.width = rect.width + 'px';
     canvas.style.height = rect.height + 'px';
     ctx.scale(devicePixelRatio, devicePixelRatio);
