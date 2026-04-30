@@ -97,14 +97,14 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
     { x: 0.22, y: 0.18, r: 7, type: 'switch' },
     { x: 0.30, y: 0.42, r: 7, type: 'router' },
     { x: 0.12, y: 0.82, r: 6, type: 'device' },
-    { x: 0.35, y: 0.72, r: 7, type: 'switch' },
+    { x: 0.32, y: 0.76, r: 7, type: 'switch' },
     { x: 0.70, y: 0.20, r: 7, type: 'router' },
     { x: 0.78, y: 0.45, r: 7, type: 'switch' },
     { x: 0.85, y: 0.22, r: 6, type: 'device' },
     { x: 0.90, y: 0.60, r: 6, type: 'router' },
     { x: 0.75, y: 0.75, r: 6, type: 'device' },
     { x: 0.88, y: 0.82, r: 7, type: 'switch' },
-    { x: 0.65, y: 0.55, r: 6, type: 'device' },
+    { x: 0.65, y: 0.68, r: 6, type: 'device' },
     { x: 0.05, y: 0.65, r: 6, type: 'device' },
     { x: 0.95, y: 0.40, r: 6, type: 'device' },
   ];
@@ -120,9 +120,9 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
   function spawnPacket() {
     const linkIdx = Math.floor(Math.random() * links.length);
     const reverse = Math.random() > 0.5;
-    packets.push({ link: linkIdx, t: 0, speed: 0.003 + Math.random() * 0.004, reverse });
+    packets.push({ link: linkIdx, t: 0, speed: 0.006 + Math.random() * 0.006, reverse });
   }
-  for (let i = 0; i < 5; i++) spawnPacket();
+  for (let i = 0; i < 12; i++) spawnPacket();
 
   function getNodePos(i) {
     const rw = canvas.width / devicePixelRatio;
