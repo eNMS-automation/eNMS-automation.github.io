@@ -169,7 +169,7 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(pos.x - s / 2, pos.y - s / 2, s, s);
       // Draw icon
-      ctx.globalAlpha = 0.45;
+      ctx.globalAlpha = 0.6;
       ctx.drawImage(icon, pos.x - s / 2, pos.y - s / 2, s, s);
       ctx.globalAlpha = 1;
     });
