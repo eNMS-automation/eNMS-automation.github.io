@@ -167,7 +167,7 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
       }
     }
 
-    // Draw nodes as device icons
+    // Draw nodes as device icons (on top of packets)
     const time = Date.now() * 0.001;
     nodeDefs.forEach((node, i) => {
       const pos = getNodePos(i);
@@ -176,6 +176,10 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
       const size = node.r * 5;
       const pulse = 1 + Math.sin(time * 1.5 + i * 0.7) * 0.05;
       const s = size * pulse;
+      // White mask to hide packets behind icon
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(pos.x - s / 2, pos.y - s / 2, s, s);
+      // Draw icon
       ctx.globalAlpha = 0.45;
       ctx.drawImage(icon, pos.x - s / 2, pos.y - s / 2, s, s);
       ctx.globalAlpha = 1;
