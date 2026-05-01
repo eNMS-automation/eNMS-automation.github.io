@@ -233,7 +233,10 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  max-width: none;
+  margin-left: -100px;
+  margin-right: -100px;
 }
 
 .stat { text-align: center; }
