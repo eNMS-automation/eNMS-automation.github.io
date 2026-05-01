@@ -30,6 +30,22 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+// Active nav link tracking
+const sections = document.querySelectorAll('section[id], footer[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => a.classList.remove('active-link'));
+      const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (match) match.classList.add('active-link');
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-64px 0px 0px 0px' });
+
+sections.forEach(s => sectionObserver.observe(s));
+
 // Screenshot tabs
 const tabs = document.querySelectorAll('.screenshot-tab');
 const slides = document.querySelectorAll('.screenshot-slide');
