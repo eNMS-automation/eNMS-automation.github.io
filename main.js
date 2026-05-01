@@ -1,3 +1,15 @@
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -165,8 +177,9 @@ document.querySelectorAll('.pricing-grid .pricing-card').forEach((card, i) => {
       const size = node.r * 5;
       const pulse = 1 + Math.sin(time * 1.5 + i * 0.7) * 0.05;
       const s = size * pulse;
-      // White mask to hide packets behind icon
-      ctx.fillStyle = '#ffffff';
+      // Mask to hide packets behind icon
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      ctx.fillStyle = isDark ? '#0f172a' : '#ffffff';
       ctx.fillRect(pos.x - s / 2, pos.y - s / 2, s, s);
       // Draw icon
       ctx.globalAlpha = 0.6;
