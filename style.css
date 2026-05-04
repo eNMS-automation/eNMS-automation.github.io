@@ -94,7 +94,7 @@
   background: rgba(129,140,248,0.15);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -566,7 +566,7 @@ a { color: inherit; text-decoration: none; }
 .pricing {
   padding: 64px 0;
   background: var(--bg-alt);
-  scroll-margin-top: 5px;
+  scroll-margin-top: 64px;
 }
 
 .pricing-grid {
@@ -698,7 +698,7 @@ a { color: inherit; text-decoration: none; }
 .features-table {
   padding: 64px 0;
   background: var(--bg);
-  scroll-margin-top: 5px;
+  scroll-margin-top: 64px;
 }
 
 [data-theme="dark"] .features-table {

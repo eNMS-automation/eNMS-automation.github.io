@@ -262,9 +262,7 @@ window.addEventListener('load', () => {
     const target = document.querySelector(location.hash);
     if (target) {
       requestAnimationFrame(() => {
-        const navHeight = document.getElementById('nav').offsetHeight;
-        const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
-        window.scrollTo({ top, behavior: 'instant' });
+        target.scrollIntoView();
       });
     }
   }
