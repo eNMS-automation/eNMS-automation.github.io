@@ -60,26 +60,43 @@ tabs.forEach(tab => {
   });
 });
 
-// Prefetch all screenshot images well before section comes into view
+// Load screenshots: preload on mobile, prefetch on desktop
 const screenshotSection = document.querySelector('.screenshots');
-const prefetchObserver = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) {
-    slides.forEach(slide => {
-      const img = slide.querySelector('img');
-      if (img && img.dataset.src === undefined) {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.as = 'image';
-        link.href = img.src;
-        document.head.appendChild(link);
-      }
-    });
-    prefetchObserver.unobserve(screenshotSection);
-  }
-}, { rootMargin: '600px' });
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-if (screenshotSection) {
-  prefetchObserver.observe(screenshotSection);
+if (isMobile) {
+  // On mobile, preload all screenshot images immediately
+  slides.forEach(slide => {
+    const img = slide.querySelector('img');
+    if (img) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = img.src;
+      document.head.appendChild(link);
+    }
+  });
+} else {
+  // On desktop, prefetch when section comes into view
+  const prefetchObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      slides.forEach(slide => {
+        const img = slide.querySelector('img');
+        if (img && img.dataset.src === undefined) {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.as = 'image';
+          link.href = img.src;
+          document.head.appendChild(link);
+        }
+      });
+      prefetchObserver.unobserve(screenshotSection);
+    }
+  }, { rootMargin: '600px' });
+
+  if (screenshotSection) {
+    prefetchObserver.observe(screenshotSection);
+  }
 }
 
 // Scroll reveal with IntersectionObserver
