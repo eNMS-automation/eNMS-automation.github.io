@@ -46,7 +46,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// Screenshot tabs
+// Screenshot tabs with smart prefetch
 const tabs = document.querySelectorAll('.screenshot-tab');
 const slides = document.querySelectorAll('.screenshot-slide');
 
@@ -59,6 +59,28 @@ tabs.forEach(tab => {
     document.querySelector(`.screenshot-slide[data-index="${index}"]`).classList.add('active');
   });
 });
+
+// Prefetch all screenshot images well before section comes into view
+const screenshotSection = document.querySelector('.screenshots');
+const prefetchObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    slides.forEach(slide => {
+      const img = slide.querySelector('img');
+      if (img && img.dataset.src === undefined) {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.as = 'image';
+        link.href = img.src;
+        document.head.appendChild(link);
+      }
+    });
+    prefetchObserver.unobserve(screenshotSection);
+  }
+}, { rootMargin: '600px' });
+
+if (screenshotSection) {
+  prefetchObserver.observe(screenshotSection);
+}
 
 // Scroll reveal with IntersectionObserver
 const reveals = document.querySelectorAll('.reveal');
