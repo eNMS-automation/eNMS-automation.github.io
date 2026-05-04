@@ -566,7 +566,7 @@ a { color: inherit; text-decoration: none; }
 .pricing {
   padding: 64px 0;
   background: var(--bg-alt);
-  scroll-margin-top: 35px;
+  scroll-margin-top: 5px;
 }
 
 .pricing-grid {
@@ -698,7 +698,7 @@ a { color: inherit; text-decoration: none; }
 .features-table {
   padding: 64px 0;
   background: var(--bg);
-  scroll-margin-top: 35px;
+  scroll-margin-top: 5px;
 }
 
 [data-theme="dark"] .features-table {
