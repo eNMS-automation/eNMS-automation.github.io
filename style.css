@@ -766,6 +766,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 768px) {
+  .network-bg { display: none; }
+
   .nav-toggle { display: flex; }
 
   .nav-links {
