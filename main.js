@@ -46,7 +46,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// Screenshot tabs with smart prefetch
+// Screenshot tabs
 const tabs = document.querySelectorAll('.screenshot-tab');
 const slides = document.querySelectorAll('.screenshot-slide');
 
